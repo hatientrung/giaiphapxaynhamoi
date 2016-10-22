@@ -202,12 +202,12 @@
   margin-bottom: 0;
 }
 .woocommerce-page #container {
-  float: left;
+  float: right;
   width: 71.287%;
 }
 .woocommerce-page.no-sidebar #container {
-  float: none;
-  width: auto;
+  /*float: none;*/
+  /*width: auto;*/
 }
 .woocommerce-page.sidebar-position-left #container {
   float: right;

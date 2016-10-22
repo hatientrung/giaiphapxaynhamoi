@@ -328,6 +328,13 @@ if( !function_exists('vantage_scripts') ) :
  * Enqueue scripts and styles
  */
 function vantage_scripts() {
+	/**
+	 * Trung St custom
+	 */
+	wp_enqueue_style( 'vantage-woocommerce', get_template_directory_uri() . '/css/custom-by-trung.css' );
+	/**
+	 * end Trung St custom
+	 */
 	wp_enqueue_style( 'vantage-style', get_stylesheet_uri(), array(), SITEORIGIN_THEME_VERSION );
 	wp_enqueue_style( 'font-awesome', get_template_directory_uri().'/fontawesome/css/font-awesome.css', array(), '4.6.2' );
 
