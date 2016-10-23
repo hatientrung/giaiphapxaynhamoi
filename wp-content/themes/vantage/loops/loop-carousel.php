@@ -10,6 +10,8 @@
 	<ul class="vantage-carousel" data-query="<?php echo esc_attr(json_encode( $vars )) ?>" data-ajax-url="<?php echo esc_url( admin_url('admin-ajax.php') ) ?>">
 		<?php while( have_posts() ) : the_post(); ?>
 			<li class="carousel-entry">
+
+				<!-- Get thumbnail for product -->
 				<div class="thumbnail">
 					<?php $img = wp_get_attachment_image_src(get_post_thumbnail_id(), 'vantage-carousel'); ?>
 					<?php if( $img[0] ) : ?>
@@ -20,6 +22,8 @@
 						<a href="<?php the_permalink() ?>" class="default-thumbnail"><span class="overlay"></span></a>
 					<?php endif; ?>
 				</div>
+
+				<!-- Get title for product -->
 				<?php
 				$title = get_the_title();
 				if( empty( $title ) ) {
