@@ -335,6 +335,13 @@ function vantage_scripts() {
 	/**
 	 * end Trung St custom
 	 */
+	/**
+	 * Trung Ha custom
+	 */
+	wp_enqueue_style( 'vantage-services', get_template_directory_uri() . '/css/custom-by-trungha.css' );
+	/**
+	 * end Trung St custom
+	 */
 	wp_enqueue_style( 'vantage-style', get_stylesheet_uri(), array(), SITEORIGIN_THEME_VERSION );
 	wp_enqueue_style( 'font-awesome', get_template_directory_uri().'/fontawesome/css/font-awesome.css', array(), '4.6.2' );
 
@@ -615,3 +622,14 @@ function vantage_recommended_plugins(){
 	tgmpa( $plugins, $config );
 }
 add_action( 'tgmpa_register', 'vantage_recommended_plugins' );
+
+// Trung custom
+register_sidebar(array(
+    'name' => 'Block Services',
+    'id' => 'block-services',
+    'description' => 'Show services region',
+    'before_widget' => '<div id="%1$s" class="widget %2$s">',
+    'after_widget' => '</div>',
+    'before_title' => '<h1 class="widget-title">',
+    'after_title' => '</h1>'
+));
