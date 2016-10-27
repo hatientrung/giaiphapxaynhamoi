@@ -1,0 +1,39 @@
+#page-wrapper #main .full-container #container {
+    width: 73%;
+    float: right;
+}
+
+body #secondary .widget ul li {
+    padding: 12px 0;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+body #secondary .widget ul li ul li{
+    list-style: inside;
+}
+
+body #secondary .widget ul li ul li{
+    padding: 12px 0;
+    border-top: 1px solid #e8e8e8;
+    border-bottom: none;
+}
+
+body #secondary .widget ul li a {
+    color: #6e6e6e;
+    text-decoration: none;
+    margin-left: -16px;
+    font-weight: bold;
+    padding: 4px 8px 4px 16px;
+}
+
+body #secondary .widget ul li a:hover {
+    color: #3183bf;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+body #secondary aside {
+    width: 80%;
+    background-color: rgb(243,242,234);
+    padding: 10px;
+}

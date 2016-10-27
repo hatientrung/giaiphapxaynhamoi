@@ -331,7 +331,7 @@ function vantage_scripts() {
 	/**
 	 * Trung St custom
 	 */
-	wp_enqueue_style( 'vantage-woocommerce', get_template_directory_uri() . '/css/custom-by-trung.css' );
+	wp_enqueue_style( 'vantage-woocommerce', get_template_directory_uri() . '/css/custom-products.css' );
 	/**
 	 * end Trung St custom
 	 */
