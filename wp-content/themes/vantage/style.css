@@ -583,8 +583,8 @@ body {
 #masthead .hgroup {
     zoom: 1;
     position: relative;
-    padding-top: 45px;
-    padding-bottom: 45px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 #masthead .hgroup:before {
@@ -605,7 +605,8 @@ body {
 #masthead .hgroup h1 {
     color: #666666;
     font-weight: 100;
-    font-size: 36px;
+    font-size: 26px;
+    font-family: "Open Sans", Arial, sans-serif;
     line-height: 1em;
 }
 

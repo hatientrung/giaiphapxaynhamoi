@@ -19,60 +19,60 @@ function vantage_prebuilt_page_layouts($layouts){
 		'screenshot' =>  get_template_directory_uri() . '/images/default-home.png',
 		'widgets' =>
 		array(
-			0 =>
-			array(
-				'title' => __('Editable Home Page','vantage'),
-				'text' => __("You can edit this home page using our free, drag and drop Page Builder, or simply disable it to fall back to a standard blog. It's a powerful page building experience.",'vantage'),
-				'icon' => 'icon-edit',
-				'image' => '',
-				'icon_position' => 'top',
-				'more' => __('Start Editing','vantage'),
-				'more_url' => '#',
-				'box' => false,
-				'info' =>
-				array(
-					'class' => 'Vantage_CircleIcon_Widget',
-					'id' => '1',
-					'grid' => '0',
-					'cell' => '0',
-				),
-			),
-			1 =>
-			array(
-				'title' => __('Loads of Icons', 'vantage'),
-				'text' => __('This widget uses FontAwesome - giving you hundreds of icons. Or you could disable the icon and use your own image image. Great for testimonials.','vantage'),
-				'icon' => 'icon-ok-circle',
-				'image' => '',
-				'icon_position' => 'top',
-				'more' => __('Example Button','vantage'),
-				'more_url' => '#',
-				'box' => false,
-				'info' =>
-				array(
-					'class' => 'Vantage_CircleIcon_Widget',
-					'id' => '2',
-					'grid' => '0',
-					'cell' => '1',
-				),
-			),
-			2 =>
-			array(
-				'title' => __('Saves You Time','vantage'),
-				'text' => __("Building your pages using a drag and drop page builder is a great experience that will save you time. Time is valuable. Don't waste it.",'vantage'),
-				'icon' => 'icon-time',
-				'image' => '',
-				'icon_position' => 'top',
-				'more' => __('Test Button','vantage'),
-				'more_url' => '#',
-				'box' => false,
-				'info' =>
-				array(
-					'class' => 'Vantage_CircleIcon_Widget',
-					'id' => '3',
-					'grid' => '0',
-					'cell' => '2',
-				),
-			),
+//			0 =>
+//			array(
+//				'title' => __('Editable Home Page','vantage'),
+//				'text' => __("You can edit this home page using our free, drag and drop Page Builder, or simply disable it to fall back to a standard blog. It's a powerful page building experience.",'vantage'),
+//				'icon' => 'icon-edit',
+//				'image' => '',
+//				'icon_position' => 'top',
+//				'more' => __('Start Editing','vantage'),
+//				'more_url' => '#',
+//				'box' => false,
+//				'info' =>
+//				array(
+//					'class' => 'Vantage_CircleIcon_Widget',
+//					'id' => '1',
+//					'grid' => '0',
+//					'cell' => '0',
+//				),
+//			),
+//			1 =>
+//			array(
+//				'title' => __('Loads of Icons', 'vantage'),
+//				'text' => __('This widget uses FontAwesome - giving you hundreds of icons. Or you could disable the icon and use your own image image. Great for testimonials.','vantage'),
+//				'icon' => 'icon-ok-circle',
+//				'image' => '',
+//				'icon_position' => 'top',
+//				'more' => __('Example Button','vantage'),
+//				'more_url' => '#',
+//				'box' => false,
+//				'info' =>
+//				array(
+//					'class' => 'Vantage_CircleIcon_Widget',
+//					'id' => '2',
+//					'grid' => '0',
+//					'cell' => '1',
+//				),
+//			),
+//			2 =>
+//			array(
+//				'title' => __('Saves You Time','vantage'),
+//				'text' => __("Building your pages using a drag and drop page builder is a great experience that will save you time. Time is valuable. Don't waste it.",'vantage'),
+//				'icon' => 'icon-time',
+//				'image' => '',
+//				'icon_position' => 'top',
+//				'more' => __('Test Button','vantage'),
+//				'more_url' => '#',
+//				'box' => false,
+//				'info' =>
+//				array(
+//					'class' => 'Vantage_CircleIcon_Widget',
+//					'id' => '3',
+//					'grid' => '0',
+//					'cell' => '2',
+//				),
+//			),
 			3 =>
 			array(
 				'headline' => __('This Is A Headline Widget','vantage'),

@@ -13,6 +13,8 @@ and open the template in the editor.
     float:left !important;
     height: 0;
     padding-bottom: 20%;
+    margin-left: 10%;
+    margin-top: 5%;
     width: 20%;
     background-position: 50% 50%;
     background-repeat: no-repeat;
@@ -23,7 +25,24 @@ and open the template in the editor.
 .title-services{
     position: absolute;
     text-align: center;
-    top: 40%;
+    top: 100%;
     width: 100%;
 
+}
+@media screen and (max-width: 520px) {
+.img-services{
+        position: relative;
+    float:none !important;
+    height: 0;
+    padding-bottom: 200px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-top: 10%;
+    width: 200px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    text-align: center;
+}
 }
