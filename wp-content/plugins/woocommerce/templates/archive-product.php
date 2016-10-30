@@ -75,7 +75,7 @@ get_header( 'shop' ); ?>
 			<?php
 				/**
 				 * woocommerce_after_shop_loop hook.
-				 * 
+				 *
 				 * @hooked woocommerce_pagination - 10
 				 */
 				do_action( 'woocommerce_after_shop_loop' );
