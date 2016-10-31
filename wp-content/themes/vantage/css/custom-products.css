@@ -3,13 +3,32 @@
     float: right;
 }
 
+body #secondary aside .product-categories:first-child > li:first-child > a {
+    text-decoration: none;
+    margin-left: -16px;
+    font-weight: bold;
+    color: #515151;
+    font-size: 16px;
+    padding: 4px 8px 4px 16px;
+}
+
+body #secondary aside .product-categories li a {
+    color: #6e6e6e;
+    font-weight: bold;
+}
+
+body #secondary aside .product-categories li ul li {
+    list-style-type:none;
+}
+
+body #secondary aside .product-categories li ul li ul li{
+    list-style-type: circle;
+    margin-left: 10px;
+}
+
 body #secondary .widget ul li {
     padding: 12px 0;
     border-bottom: 1px solid #e8e8e8;
-}
-
-body #secondary .widget ul li ul li{
-    list-style: inside;
 }
 
 body #secondary .widget ul li ul li{
@@ -19,11 +38,7 @@ body #secondary .widget ul li ul li{
 }
 
 body #secondary .widget ul li a {
-    color: #6e6e6e;
-    text-decoration: none;
-    margin-left: -16px;
-    font-weight: bold;
-    padding: 4px 8px 4px 16px;
+
 }
 
 body #secondary .widget ul li a:hover {
@@ -36,4 +51,23 @@ body #secondary aside {
     width: 80%;
     background-color: rgb(243,242,234);
     padding: 10px;
+}
+
+/**
+ * ----- HOME PAGE -------
+ */
+h3 .vantage-carousel-title .vantage-carousel-title-text {
+    color: #444444;
+    font-size: 26px;
+    letter-spacing: 1px;
+    line-height: 36px;
+    margin: 0;
+    padding-top: 20px;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-family: Arial;
+}
+
+body .panel-grid-cell .widget-title {
+    text-align: center;
 }
