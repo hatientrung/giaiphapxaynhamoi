@@ -622,7 +622,8 @@ function vantage_recommended_plugins(){
 	tgmpa( $plugins, $config );
 }
 add_action( 'tgmpa_register', 'vantage_recommended_plugins' );
-
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 10 );
+remove_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_price', 10 );
 // Trung custom
 register_sidebar(array(
     'name' => 'Block Services',
