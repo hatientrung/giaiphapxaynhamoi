@@ -4043,7 +4043,7 @@ body.layout-full {
 
 [class^="vantage-icon-"],
 [class*=" vantage-icon-"] {
-    font-family: 'vantage-icons';
+    font-family: 'vantage-icons' !important;
     speak: none;
     font-style: normal;
     font-weight: normal;

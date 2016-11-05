@@ -398,7 +398,7 @@ function vantage_customizer_init(){
 				'type' => 'color',
 				'title' => __('Header Widget Menu Border Color', 'vantage'),
 				'default' => '#00bcff',
-				'selector' => '#header-sidebar .widget_nav_menu ul.menu > li > ul.sub-menu',
+				'selector' => '#header-sidebar .widget_nav_menu ul.menu > li > ul.sub-menu ul.custom-menu',
 				'property' => array('border-top-color'),
 				'no_live' => true,
 			),
