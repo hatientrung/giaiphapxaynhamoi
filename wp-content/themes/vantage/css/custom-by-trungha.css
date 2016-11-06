@@ -7,14 +7,23 @@ and open the template in the editor.
     Created on : Oct 26, 2016, 11:54:50 PM
     Author     : Trung Ha
 */
-
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300');
+.full-container{
+    max-width: 100% !important;
+}
+.site-main{
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    padding-top: 10px !important;
+}
 .img-services{
     position: relative;
     float:left !important;
-    height: 0;
+    /*height: 0;*/
     padding-bottom: 20%;
     margin-left: 10%;
     margin-top: 5%;
+    margin-bottom: 10px;
     width: 20%;
     background-position: 50% 50%;
     background-repeat: no-repeat;
@@ -25,15 +34,83 @@ and open the template in the editor.
 .title-services{
     position: absolute;
     text-align: center;
-    top: 100%;
+    bottom: 100%;
     width: 100%;
 
 }
+.div_services_title h1{
+    text-align: center;
+}
+.hgroup-custom{
+    background: white !important;
+    padding-top: 5px !important;
+    padding-bottom: 0px !important;
+}
+.sub-menu{
+    border-top: 2px solid #ffba00;
+    font-family: 'Open Sans', sans-serif;
+} 
+#masthead h1.logo-title{
+    margin-left: 0px !important;
+}
+.list-services{
+    padding-bottom: 20px;
+    height: 100%;
+}
+.entry-content{
+width: 70% !important;
+margin-left: auto !important;
+margin-right: auto !important;
+}
+html *
+{
+    font-family: 'Open Sans', sans-serif !important;
+}
+/* home */
+.item-services{
+    /*display: table-cell;*/
+}
+.thiet_ke1{
+    padding-top: 20px;
+}
+.banner-section {
+    padding: 30px 0;
+    background: #ffba00;
+    text-align: center;
+}
+a.button-one {
+    color: #ffffff;
+    background: transparent;
+    font-size: 12px;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    border: 2px solid #ffffff;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+    padding: 10px 35px;
+    text-decoration: none;
+    margin-left: 60px;
+}
+.banner-section h2 {
+    color: #222222;
+    font-size: 17px;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-weight: normal;
+    margin: 0 0 15px;
+    margin-bottom: 0;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+/*media*/
 @media screen and (max-width: 520px) {
 .img-services{
-        position: relative;
+    position: relative;
     float:none !important;
-    height: 0;
+    /*height: 0;*/
     padding-bottom: 200px;
     margin-left: auto !important;
     margin-right: auto !important;
@@ -44,5 +121,17 @@ and open the template in the editor.
     background-size: cover;
     border-radius: 50%;
     text-align: center;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+a.button-one {
+ display: block;
+ margin-right: auto;
+ margin-left: auto;
+ margin-top: 10px;
+ width: 70px;
+}
+.thiet_ke1{
+    padding-top: 5px;
 }
 }

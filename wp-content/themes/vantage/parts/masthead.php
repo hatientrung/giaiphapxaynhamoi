@@ -5,7 +5,7 @@
 ?>
 <header id="masthead" class="site-header" role="banner">
 
-	<div class="hgroup full-container <?php if ( is_active_sidebar( 'sidebar-masthead' ) ) echo 'masthead-sidebar' ?>">
+	<div class="hgroup hgroup-custom full-container <?php if ( is_active_sidebar( 'sidebar-masthead' ) ) echo 'masthead-sidebar' ?>">
 
 		<?php if ( !is_active_sidebar( 'sidebar-masthead' ) ) : ?>
 
