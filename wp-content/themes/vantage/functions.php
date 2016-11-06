@@ -634,3 +634,57 @@ register_sidebar(array(
     'before_title' => '<h1 class="widget-title">',
     'after_title' => '</h1>'
 ));
+function my_tweaked_admin_bar() {
+	global $wp_admin_bar;
+
+	//Add a link called 'My Link'...
+	$wp_admin_bar->add_menu( array(
+		'id'    => 'custom-setting',
+		'title' => 'Cài đặt',
+		'href'  => admin_url()
+	));
+
+	//THEN add a sub-link called 'Sublink 1'...
+	$wp_admin_bar->add_menu( array(
+		'id'    => 'custom-setting-company-name',
+		'title' => 'Tên công ty',
+		'href'  => admin_url(),
+		'parent'=>'custom-setting'
+	));
+	//add_submenu_page( 'settingpage/settingpage_admin_page.php', 'My Sub Level Menu Example', 'Sub Level Menu', 'manage_options', 'settingpage/settingpage-admin-sub-page.php', 'settingpage_admin_sub_page' ); 
+
+}
+// add_action( 'wp_before_admin_bar_render', 'my_tweaked_admin_bar' ); 
+
+// function admin_menu() {
+// 	add_options_page(
+// 		'Home Settings',
+// 		'Cài đặt tổng quát',
+// 		'manage_options',
+// 		'home_settings',
+// 		'settings_page'
+// 		);
+// }
+
+// function  settings_page() {
+// 	include get_template_directory() . '/page/settings/home-settings.php';
+// }
+// add_action('admin_menu','admin_menu');
+
+// add config company name
+// $new_general_setting = new new_general_setting();
+
+// class new_general_setting {
+//     function new_general_setting( ) {
+//         add_filter( 'admin_init' , array( &$this , 'register_fields' ) );
+//     }
+//     function register_fields() {
+//         register_setting( 'general', 'company_name', 'esc_attr' );
+//         add_settings_field('fav_color', '<label for="company_name">'.__('Tên công ty' , 'company_name' ).'</label>' , array(&$this, 'fields_html') , 'general' );
+//     }
+//     function fields_html() {
+//         $value = get_option( 'company_name', '');
+//         echo '<input type="text" class="regular-text" id="company_name" name="company_name" value="' . $value . '" />';
+//     }
+// }
+// 
