@@ -71,7 +71,56 @@ h3 .vantage-carousel-title .vantage-carousel-title-text {
 body .panel-grid-cell .widget-title {
     text-align: center;
 }
-
+/*--------------------------- HOME PAGE -----------------------------------*/
+.widget.trung_show_product ul{
+    margin: 0;
+}
+.site-main .st_show_product_home_page { list-style-type: none; overflow: hidden; width: 100%; box-sizing: border-box; }
+.site-main .st_show_product_home_page li { float:left; margin: 10px 1%; padding: 0; width: 23%; }
+.site-main .st_show_product_home_page li:hover {
+    border-bottom: 0 none;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.46);
+}
+.site-main .st_show_product_home_page li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+}
+.site-main .st_show_product_home_page li .st_title {
+    padding-top: 0;
+    text-align: center;
+}
+.site-main .st_show_product_home_page li .st_title .st_post_title {
+    font-weight: 500;
+}
+.site-main .st_show_product_home_page li a img { width: 100%; max-height: 170px; }
+.trung_show_product .widget-title {
+    font-size: 30px;
+    text-align: center;
+}
+.gach_ngang {
+    border-bottom: 1px solid #ddd;
+    width: 70%;
+    text-align: center;
+    margin: auto;
+}
+#content .page-title {
+    color: #FFC52A;
+    font-size: 32px;
+    font-weight: 700;
+    border-bottom: 1px solid #ffc52a;
+    margin: 20px 0;
+    padding-bottom: 20px;
+}
+#content .term-description {
+    border-bottom: 1px solid #ffc52a;
+    margin: 20px 0;
+    padding-bottom: 20px;
+}
+.woocommerce ul.products li.product a img {
+    height: 150px;
+}
 @media screen and ( max-width: 1280px)  {
 
 }
