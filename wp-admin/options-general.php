@@ -60,6 +60,9 @@ include( ABSPATH . 'wp-admin/admin-header.php' );
 <th scope="row"><label for="blogname"><?php _e('Site Title') ?></label></th>
 <td><input name="blogname" type="text" id="blogname" value="<?php form_option('blogname'); ?>" class="regular-text" /></td>
 </tr>
+<th scope="row"><label for="company_name"><?php _e('Tên Công ty') ?></label></th>
+<td><input name="company_name" type="text" id="company_name" value="<?php form_option('company_name'); ?>" class="regular-text" /></td>
+</tr>
 <tr>
 <th scope="row"><label for="blogdescription"><?php _e('Tagline') ?></label></th>
 <td><input name="blogdescription" type="text" id="blogdescription" aria-describedby="tagline-description" value="<?php form_option('blogdescription'); ?>" class="regular-text" />

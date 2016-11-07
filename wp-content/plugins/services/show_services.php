@@ -29,7 +29,7 @@ $categories = get_categories($args);
 ?>
 <div class='list-services'>
 <div class="div_services_title">
-	<h1><b>CÔNG TY THIẾT KẾ - XÂY DỰNG ABC<b></h1>
+	<h1><b><?php echo get_option('company_name'); ?><b></h1>
 </div>
 <?php
 foreach ($categories as $cat) {
