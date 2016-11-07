@@ -581,7 +581,7 @@ add_action('widgets_init', function () {
     register_widget('Trung_Show_Product');
 });
 add_action( 'widgets_init', function(){
-    register_widget( 'Widget_Product_ThietKe_CongTrinh' );
+    register_widget( 'Widget_Product_ThietKe_Nha' );
 });
 //add_action( 'widgets_init', function(){
 //    register_widget( 'Widget_Product_XayDung' );
@@ -624,7 +624,8 @@ class Trung_Show_Product extends WP_Widget
         echo $args['before_widget'];
         if (!empty($instance['title'])) {
             // Get Title
-            echo $args['before_title'] . apply_filters('widget_title', $instance['title']) . $args['after_title'];
+            echo '<div class="gach_ngang"></div>';
+            echo '<a href="http://camnangxaynhamoi.com/danh-muc/vat-tu/" style="text-decoration: none">'. $args['before_title'] . apply_filters('widget_title', $instance['title']) . $args['after_title'] .'</a>';
             echo '<div class="gach_ngang"></div>';
         }
 
@@ -693,20 +694,20 @@ class Trung_Show_Product extends WP_Widget
 }
 
 /**
- * Class Widget_Product_ThietKe_CongTrinh
+ * Class Widget_Product_ThietKe_Nha
  */
-class Widget_Product_ThietKe_CongTrinh extends WP_Widget {
+class Widget_Product_ThietKe_Nha extends WP_Widget {
 
     /**
      * Sets up the widgets name etc
      */
     public function __construct() {
         $widget_ops = array(
-            'classname' => 'wid_thieket_congtrinh',
-            'description' => 'Hiển Thị Product thiết kế - công trình',
+            'classname' => 'wid_thieket_nha',
+            'description' => 'Hiển Thị Product thiết kế - nhà',
         );
 
-        parent::__construct( 'wid_thieket_congtrinh', 'TrungSt Product ThietKe CongTrinh', $widget_ops );
+        parent::__construct( 'wid_thieket_nha', 'TrungSt Product ThietKe Nha', $widget_ops );
     }
 
 
@@ -722,11 +723,12 @@ class Widget_Product_ThietKe_CongTrinh extends WP_Widget {
         echo $args['before_widget'];
         if (!empty($instance['title'])) {
             // Get Title
-            echo $args['before_title'] . apply_filters('widget_title', $instance['title']) . $args['after_title'];
+            echo '<div class="gach_ngang"></div>';
+            echo '<a href="http://camnangxaynhamoi.com/danh-muc/thiet-ke/thiet-ke-nha/" style="text-decoration: none">'. $args['before_title'] . apply_filters('widget_title', $instance['title']) . $args['after_title'] .'</a>';
             echo '<div class="gach_ngang"></div>';
         }
 
-        $args = array('post_type' => 'product', 'posts_per_page' => 4, 'product_cat' => 'cong-trinh');
+        $args = array('post_type' => 'product', 'posts_per_page' => 4, 'product_cat' => 'thiet-ke-nha');
 
         $loop = new WP_Query($args);
         echo '<div><ul class="st_show_product_home_page">';
@@ -796,7 +798,7 @@ class Widget_Product_ThietKe_NoiThat extends WP_Widget {
     public function __construct() {
         $widget_ops = array(
             'classname' => 'wid_thieket_noithat',
-            'description' => 'Hiển Thị Product thiết kế - nội thất',
+            'description' => 'Hiển Thị Product thiết kế - nhà',
         );
 
         parent::__construct( 'wid_thieket_noithat', 'TrungSt Product ThietKe NoiThat', $widget_ops );
@@ -815,11 +817,12 @@ class Widget_Product_ThietKe_NoiThat extends WP_Widget {
         echo $args['before_widget'];
         if (!empty($instance['title'])) {
             // Get Title
-            echo $args['before_title'] . apply_filters('widget_title', $instance['title']) . $args['after_title'];
+            echo '<div class="gach_ngang"></div>';
+            echo '<a href="http://camnangxaynhamoi.com/danh-muc/thiet-ke/thiet-ke-noi-that/" style="text-decoration: none">'. $args['before_title'] . apply_filters('widget_title', $instance['title']) . $args['after_title'] .'</a>';
             echo '<div class="gach_ngang"></div>';
         }
 
-        $args = array('post_type' => 'product', 'posts_per_page' => 4, 'product_cat' => 'noi-that');
+        $args = array('post_type' => 'product', 'posts_per_page' => 4, 'product_cat' => 'thiet-ke-noi-that');
 
         $loop = new WP_Query($args);
         echo '<div><ul class="st_show_product_home_page">';
