@@ -18,17 +18,7 @@ get_header();
             <?php if (is_active_sidebar('block-services')) : ?>
                 <?php dynamic_sidebar('block-services'); ?>
             <?php endif; ?>
-<!--             <?php
-            //if (is_page()) {
-                the_post();
-                the_content();
-           // } else if (function_exists('siteorigin_panels_render'))
-            //    echo siteorigin_panels_render('home');
-           // else
-            //    echo siteorigin_panels_lite_home_render();
-            ?> -->
         </div>
-        <!-- after block service put here -->
         <div class="thiet_ke1">
             <section class="banner-section">
                 <div class="container">
@@ -36,7 +26,7 @@ get_header();
                 </div>
             </section>
         </div>
-    </div><!-- #content .site-content -->
-</div><!-- #primary .content-area -->
+    </div>
+</div>
 
 <?php get_footer(); ?>
