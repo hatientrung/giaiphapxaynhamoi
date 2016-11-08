@@ -78,7 +78,7 @@ body .panel-grid-cell .widget-title {
 }
 /*--------------------------- HOME PAGE -----------------------------------*/
 .widget.trung_show_product ul{
-    margin: 0 0 70px 0;
+    margin: 0 0 30px 0;
 }
 .site-main .st_show_product_home_page { list-style-type: none; overflow: hidden; width: 100%; box-sizing: border-box; }
 .site-main .st_show_product_home_page li { float:left; margin: 10px 1%; padding: 0; width: 23%; }
@@ -162,6 +162,10 @@ body #masthead .hgroup {
         display: block;
         height: 580px;
     }
+    .st_description_category {
+        margin: 20px;
+        text-align: justify;
+    }
 }
 @media only screen and (min-width: 960px) and ( max-width: 1199px)   {
 
@@ -184,4 +188,32 @@ body #masthead .hgroup {
         display: block;
         height: 460px;
     }
+}
+/*------------- Brown top Bottom----------*/
+.MBTreadmore{
+    text-align:right;
+    cursor:pointer;
+    color:orange;
+    margin:5px 0;
+    float:right;
+    border-right:2px solid orange;
+    border-left:2px solid orange;
+    padding:5px;
+    -moz-border-radius:6px;
+    -webkit-border-radius:6px;
+    font:bold 11px sans-serif;
+}
+.MBTreadmore:hover{
+    font:bold 11px sans-serif;
+    color:orange;
+    border-right:2px solid orange;
+    border-left:2px solid orange;
+}
+.MBTreadmore a {
+    color:grey !important;
+    text-decoration:none;
+}
+.MBTreadmore a:hover {
+    color:orange !important;
+    text-decoration:none;
 }

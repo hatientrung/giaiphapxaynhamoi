@@ -634,15 +634,6 @@ register_sidebar(array(
     'before_title' => '<h1 class="widget-title">',
     'after_title' => '</h1>'
 ));
-register_sidebar(array(
-    'name' => 'List Categories',
-    'id' => 'block-list-categories',
-    'description' => 'Show list categories region',
-    'before_widget' => '<div id="%1$s" class="widget %2$s">',
-    'after_widget' => '</div>',
-    'before_title' => '<h1 class="widget-title">',
-    'after_title' => '</h1>'
-));
 function my_tweaked_admin_bar() {
 	global $wp_admin_bar;
 
@@ -696,4 +687,3 @@ function my_tweaked_admin_bar() {
 //         echo '<input type="text" class="regular-text" id="company_name" name="company_name" value="' . $value . '" />';
 //     }
 // }
-// 
