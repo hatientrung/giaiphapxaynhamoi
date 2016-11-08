@@ -19,13 +19,18 @@ get_header();
                 <?php dynamic_sidebar('block-services'); ?>
             <?php endif; ?>
         </div>
-        <div class="thiet_ke1">
+        <div class="entry-content">
+        <?php if (is_active_sidebar('block-list-categories')) : ?>
+                <?php dynamic_sidebar('block-list-categories'); ?>
+            <?php endif; ?>
+        </div>
+<!--         <div class="thiet_ke1">
             <section class="banner-section">
                 <div class="container">
                     <h2>Thiết kế nhà - thư ngỏ<a class="button-one" href="#">click here</a></h2>
                 </div>
             </section>
-        </div>
+        </div> -->
     </div>
 </div>
 
