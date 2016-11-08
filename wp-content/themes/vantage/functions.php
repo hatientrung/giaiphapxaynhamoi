@@ -633,9 +633,6 @@ register_sidebar(array(
     'after_widget' => '</div>',
     'before_title' => '<h1 class="widget-title">',
     'after_title' => '</h1>'
-<<<<<<< HEAD
-));
-=======
 ));
 function my_tweaked_admin_bar() {
 	global $wp_admin_bar;
@@ -690,5 +687,3 @@ function my_tweaked_admin_bar() {
 //         echo '<input type="text" class="regular-text" id="company_name" name="company_name" value="' . $value . '" />';
 //     }
 // }
-// 
->>>>>>> 4a5868606d718dd063e2b9609434d0662e559489

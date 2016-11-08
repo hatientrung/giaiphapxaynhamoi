@@ -630,8 +630,30 @@ class Trung_Show_Product extends WP_Widget
         }
 
         $args = array('post_type' => 'product', 'posts_per_page' => 8, 'product_cat' => 'vat-tu');
-
         $loop = new WP_Query($args);
+
+        /**
+         * Descriptin cho Vat tu
+         */
+        $args = array(
+                    'taxonomy' => 'product_cat',
+                    'slug' => 'vat-tu',
+                );
+        $terms = get_terms('product_cat', $args);
+        $count = count($terms);
+        if ($count > 0) {
+            foreach ($terms as $term) {
+                $description = $term->description;
+                $pieces = explode(" ", $description);
+                $first_part = implode(" ", array_splice($pieces, 0, 100));
+                echo '<div class="st_description_category">'.$first_part.'</div>';
+            }
+
+        }
+
+        /**
+         * In ra sanpham.
+         */
         echo '<div><ul class="st_show_product_home_page">';
         while ($loop->have_posts()) : $loop->the_post();
             global $product;
@@ -649,7 +671,7 @@ class Trung_Show_Product extends WP_Widget
             ';
         endwhile;
 
-        echo '</div></ul>';
+        echo '<div class="MBTreadmore"><a href="http://camnangxaynhamoi.com/danh-muc/vat-tu/">xem thêm...</a></div></ul></div>';
         echo $args['after_widget'];
     }
 
@@ -727,10 +749,28 @@ class Widget_Product_ThietKe_Nha extends WP_Widget {
             echo '<a href="http://camnangxaynhamoi.com/danh-muc/thiet-ke/thiet-ke-nha/" style="text-decoration: none">'. $args['before_title'] . apply_filters('widget_title', $instance['title']) . $args['after_title'] .'</a>';
             echo '<div class="gach_ngang"></div>';
         }
-
         $args = array('post_type' => 'product', 'posts_per_page' => 4, 'product_cat' => 'thiet-ke-nha');
-
         $loop = new WP_Query($args);
+
+        /**
+         * Description.
+         */
+        $args = array(
+            'taxonomy' => 'product_cat',
+            'slug' => 'thiet-ke-nha',
+        );
+        $terms = get_terms('product_cat', $args);
+        $count = count($terms);
+        if ($count > 0) {
+            foreach ($terms as $term) {
+                $description = $term->description;
+                $pieces = explode(" ", $description);
+                $first_part = implode(" ", array_splice($pieces, 0, 100));
+                echo '<div class="st_description_category">'.$first_part.'</div>';
+            }
+
+        }
+
         echo '<div><ul class="st_show_product_home_page">';
         while ($loop->have_posts()) : $loop->the_post();
             global $product;
@@ -748,7 +788,7 @@ class Widget_Product_ThietKe_Nha extends WP_Widget {
             ';
         endwhile;
 
-        echo '</div></ul>';
+        echo '<div class="MBTreadmore"><a href="http://camnangxaynhamoi.com/danh-muc/thiet-ke/thiet-ke-nha/">xem thêm...</a></div></ul></div>';
         echo $args['after_widget'];
     }
 
@@ -825,6 +865,26 @@ class Widget_Product_ThietKe_NoiThat extends WP_Widget {
         $args = array('post_type' => 'product', 'posts_per_page' => 4, 'product_cat' => 'thiet-ke-noi-that');
 
         $loop = new WP_Query($args);
+
+        /**
+         * Description.
+         */
+        $args = array(
+            'taxonomy' => 'product_cat',
+            'slug' => 'thiet-ke-nha',
+        );
+        $terms = get_terms('product_cat', $args);
+        $count = count($terms);
+        if ($count > 0) {
+            foreach ($terms as $term) {
+                $description = $term->description;
+                $pieces = explode(" ", $description);
+                $first_part = implode(" ", array_splice($pieces, 0, 100));
+                echo '<div class="st_description_category">'.$first_part.'</div>';
+            }
+
+        }
+
         echo '<div><ul class="st_show_product_home_page">';
         while ($loop->have_posts()) : $loop->the_post();
             global $product;
@@ -841,8 +901,8 @@ class Widget_Product_ThietKe_NoiThat extends WP_Widget {
                         </li>
             ';
         endwhile;
-
-        echo '</div></ul>';
+        echo '<div class="MBTreadmore"><a href="http://camnangxaynhamoi.com/danh-muc/thiet-ke/thiet-ke-noi-that/">xem thêm...</a></div></ul></div>';
+        echo '';
         echo $args['after_widget'];
     }
 
