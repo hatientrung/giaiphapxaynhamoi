@@ -653,6 +653,24 @@ register_sidebar(array(
 
 ));
 
+register_sidebar(array(
+
+    'name' => 'List Post Home Page',
+
+    'id' => 'block-list-post-home-page',
+
+    'description' => 'Show list post doi ngu, sua chua in home region',
+
+    'before_widget' => '<div id="%1$s" class="widget %2$s">',
+
+    'after_widget' => '</div>',
+
+    'before_title' => '<h1 class="widget-title">',
+
+    'after_title' => '</h1>'
+
+));
+
 function my_tweaked_admin_bar() {
 	global $wp_admin_bar;
 
