@@ -191,6 +191,7 @@ body #masthead .hgroup {
 }
 /*------------- Brown top Bottom----------*/
 .MBTreadmore{
+    text-transform: uppercase;
     text-align:right;
     cursor:pointer;
     color:orange;
@@ -216,4 +217,7 @@ body #masthead .hgroup {
 .MBTreadmore a:hover {
     color:orange !important;
     text-decoration:none;
+}
+#comments, #nav-below {
+    display: none;
 }
