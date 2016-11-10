@@ -17,7 +17,7 @@
 	'post_status'      => 'publish',
 	'suppress_filters' => true 
 );
-$posts_array = get_posts( $args ); 
+$posts_array = get_posts($args); 
 ?>
 <div class='list-services-out'>
 <div class='list-services1'>
