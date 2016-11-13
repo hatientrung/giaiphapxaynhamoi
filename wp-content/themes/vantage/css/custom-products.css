@@ -221,3 +221,10 @@ body #masthead .hgroup {
 #comments, #nav-below {
     display: none;
 }
+
+.full-container .widget_category_title h1{
+    text-align: center;
+    font-weight: 900;
+    color: #FFBA00;
+    text-transform: uppercase;
+}
