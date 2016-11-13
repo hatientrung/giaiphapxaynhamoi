@@ -20,6 +20,11 @@ get_header();
             <?php endif; ?>
         </div>
         <div class="entry-content">
+            <?php if (is_active_sidebar('block-list-post-home-page')) : ?>
+                <?php dynamic_sidebar('block-list-post-home-page'); ?>
+            <?php endif; ?>
+        </div>
+        <div class="entry-content">
         <?php if (is_active_sidebar('block-list-categories')) : ?>
                 <?php dynamic_sidebar('block-list-categories'); ?>
             <?php endif; ?>

@@ -55,7 +55,7 @@ and open the template in the editor.
     }
     .list-services{
         padding-bottom: 20px;
-        height: 100%;
+        height: auto !important;
         width: 80% !important;
         margin-left: auto !important;
         margin-right: auto !important;
@@ -148,6 +148,17 @@ and open the template in the editor.
         left: 0;
         width: 100% !important;
         height: 100% !important;
+    }
+    .list-services-out{
+        margin-right: auto !important;
+        margin-left: auto !important;
+    }
+    .list-services1{
+        padding-bottom: 20px;
+        height: auto !important;
+        width: 80% !important;
+        margin-left: auto !important;
+        text-align: center;
     }
     /*media*/
     @media screen and (max-width: 520px) {
