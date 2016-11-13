@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: Widget Product ThietKe Nha
+ * Plugin Name: Widget Product Display
  * Author: BestVuTru
  */
 add_action('widgets_init', function () {
@@ -20,10 +20,10 @@ class Widget_Product_ThietKe_Nha extends WP_Widget
     {
         $widget_ops = array(
             'classname' => 'wid_thieket_nha',
-            'description' => 'Hiển Thị Product thiết kế - nhà',
+            'description' => 'Hiển Thị Product',
         );
 
-        parent::__construct('wid_thieket_nha', 'TrungSt Product ThietKe Nha', $widget_ops);
+        parent::__construct('wid_thieket_nha', 'Product Display', $widget_ops);
     }
 
 
@@ -35,12 +35,13 @@ class Widget_Product_ThietKe_Nha extends WP_Widget
      */
     public function widget($args, $instance)
     {
+        $link = get_term_link( esc_attr($instance['category']) , 'product_cat' );
         // outputs the content of the widget
         echo $args['before_widget'];
         if (!empty($instance['title'])) {
             // Get Title
             echo '<div class="gach_ngang"></div>';
-            echo '<a href="http://camnangxaynhamoi.com/danh-muc/thiet-ke/thiet-ke-nha/" style="text-decoration: none">' . $args['before_title'] . apply_filters('widget_title', $instance['title']) . $args['after_title'] . '</a>';
+            echo '<a class="widget_category_title" href='.$link.' style="text-decoration: none">' . $args['before_title'] . apply_filters('widget_title', $instance['title']) . $args['after_title'] . '</a>';
             echo '<div class="gach_ngang"></div>';
         }
         $args = array('post_type' => 'product', 'posts_per_page' => esc_attr($instance['post_number']), 'product_cat' => esc_attr($instance['category']));
@@ -67,7 +68,6 @@ class Widget_Product_ThietKe_Nha extends WP_Widget
 
         echo '<div><ul class="st_show_product_home_page">';
         while ($loop->have_posts()) : $loop->the_post();
-            global $product;
             echo '
                         <li>
                             <a href="' . get_permalink() . '">
@@ -81,8 +81,7 @@ class Widget_Product_ThietKe_Nha extends WP_Widget
                         </li>
             ';
         endwhile;
-
-        echo '<div class="MBTreadmore"><a href="http://camnangxaynhamoi.com/danh-muc/thiet-ke/thiet-ke-nha/">xem thêm...</a></div></ul></div>';
+        echo '<div class="MBTreadmore"><a href='.$link.'>xem thêm...</a></div></ul></div>';
         echo $args['after_widget'];
     }
 
@@ -96,9 +95,10 @@ class Widget_Product_ThietKe_Nha extends WP_Widget
     {
         // outputs the options form on admin
         $default= array(
-            'title' => 'Tên của bạn',
+            'title' => 'Tên hiển thị',
             'category' => '',
-            'post_number' => '8'
+            'post_number' => '8',
+            'product_link' > ''
         );
         //Gộp các giá trị trong mảng $default vào biến $instance để nó trở thành các giá trị mặc định
         $instance = wp_parse_args((array)$instance, $default);
@@ -131,6 +131,7 @@ class Widget_Product_ThietKe_Nha extends WP_Widget
 
         <!--        Category-->
         <p>
+
             <label for="<?php echo $this->get_field_id('category'); ?>"><?php _e('Lựa Chọn Danh Mục:'); ?> <br/></label>
             <select id="<?php echo $this->get_field_id('category'); ?>"
                     name="<?php echo $this->get_field_name('category'); ?>" class="widefat" style="width:100%;">
@@ -146,7 +147,6 @@ class Widget_Product_ThietKe_Nha extends WP_Widget
             </select>
         <hr/>
         </p>
-
 
         <?php
     }
