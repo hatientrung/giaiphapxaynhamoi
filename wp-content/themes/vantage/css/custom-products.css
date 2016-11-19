@@ -88,18 +88,23 @@ body .panel-grid-cell .widget-title {
 }
 .site-main .st_show_product_home_page li a {
     display: block;
-    padding: 10px;
+    padding: 0 10px;
     text-decoration: none;
     color: black;
 }
 .site-main .st_show_product_home_page li .st_title {
     padding-top: 0;
+    height: 3em;
+    padding-bottom: 0;
     text-align: center;
 }
 .site-main .st_show_product_home_page li .st_title .st_post_title {
     font-weight: 500;
 }
-.site-main .st_show_product_home_page li a img { width: 100%; max-height: 110px; }
+.site-main .st_show_product_home_page li a img {
+    width: 100%;
+    max-height: 140px;
+}
 .trung_show_product .widget-title {
     font-size: 30px;
     text-align: center;
@@ -172,21 +177,48 @@ body #masthead .hgroup {
 }
 
 @media only screen and (min-width: 780px) and ( max-width: 959px)   {
-
+    .site-main .st_show_product_home_page li a img {
+        width: 100%;
+        max-height: 100px;
+        min-height: 100px;
+    }
 }
 
 @media screen and (min-width: 600px) and ( max-width: 779px)   {
+    .site-main .st_show_product_home_page li {
+        width: 48%;
+    }
 
+    body.responsive .full-container #secondary {
+        width: 98%;
+        float: right;
+    }
+    body #secondary aside {
+        width: 100%;
+    }
 }
 
 @media screen and (min-width: 320px) and ( max-width: 599px)   {
-
+    .site-main .st_show_product_home_page li {
+        width: 82%;
+        max-height: 250px;
+    }
+    .site-main .st_show_product_home_page li a img {
+        min-height: 180px;
+        max-height: 180px;
+    }
+    body.responsive .full-container #secondary {
+        width: 98%;
+        float: right;
+    }
+    body #secondary aside {
+        width: 100%;
+    }
 }
 
 @media only screen and (min-width: 960px) and ( max-width: 1111px)   {
     .site-main  .list-services {
         display: block;
-        height: 460px;
     }
 }
 /*------------- Brown top Bottom----------*/
@@ -227,4 +259,47 @@ body #masthead .hgroup {
     font-weight: 900;
     color: #FFBA00;
     text-transform: uppercase;
+}
+/*--------- Doi Ngu Vat Tu -----------*/
+.doingu_vattu_image {
+    width: 100%;
+    margin-top: 40px;
+}
+.doingu_vattu {
+    margin: 20px 0 50px;
+}
+.widget .doingu_vattu_image img {
+    height: 250px;
+    width: 100%;
+}
+
+.entry-content .doingu_vattu_title {
+    text-align: center;
+    font-weight: 900;
+    color: #FFBA00;
+    text-transform: uppercase;
+}
+.entry-content .doingu_vattu_title h1 {
+    text-align: center;
+    font-weight: 900;
+    color: #FFBA00;
+    text-transform: uppercase;
+}
+.tntVideoItem {
+    margin-left: 0;
+    margin-top: 40px;
+}
+.entry-content .tntVideoList h3 {
+    font-size: 1.2em;
+    text-align: center;
+    font-weight: 500;
+    text-transform: lowercase;
+}
+.entry-content h1.video_show {
+    text-align: center;
+    font-weight: 900;
+    color: #FFBA00;
+    text-transform: uppercase;
+    margin: 0;
+    line-height: 1.6em;
 }
