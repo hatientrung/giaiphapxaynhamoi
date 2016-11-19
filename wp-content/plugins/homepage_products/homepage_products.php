@@ -35,40 +35,74 @@ class Widget_Product_ThietKe_Nha extends WP_Widget
      */
     public function widget($args, $instance)
     {
-        $link = get_term_link( esc_attr($instance['category']) , 'product_cat' );
+        $link = get_term_link(esc_attr($instance['category']), 'product_cat');
         // outputs the content of the widget
         echo $args['before_widget'];
-        if (!empty($instance['title'])) {
+
+        if ($instance['category'] == 'Đội Ngũ') {
+            // Get Title
+            $page = get_page_by_title($instance['category'], OBJECT, 'post');
+            $post_id = get_post($page->ID);
+            // Get Introduce
+            $string = get_post_field('post_content', $post_id);
+            $final_string = substr( $string, strpos($string, "h1>") + 3);
+            echo '<div class="gach_ngang"></div>';
+            echo '<a class="doingu_vattu_title" href=' . get_permalink( $post_id ) . ' 
+            style="text-decoration: none"><h1>'. $instance['category'] .'</h1></a>';
+            echo '<div class="gach_ngang"></div>';
+            echo '<div class="doingu_vattu">
+
+
+                    <div class="doingu_vattu_content">'.
+                        wp_trim_words( $final_string , $num_words = 250, $more = '...' )
+                    .'</div>
+                    <div class="MBTreadmore">
+                        <a href=' .  get_permalink( $post_id ) . '>xem thêm...</a>
+                    </div>
+                    <div class="doingu_vattu_image">
+                       '.  get_the_post_thumbnail( $post_id ) .'
+                    </div>
+                </div>';
+        }
+        else if ($instance['category'] == 'Sửa chữa') {
+            // Get Title
+            $page = get_page_by_title($instance['category'], OBJECT, 'post');
+            $post_id = get_post($page->ID);
+            // Get Introduce
+            $string = get_post_field('post_content', $post_id);
+            $final_string = substr( $string, strpos($string, "h1>") + 3);
+            echo '<div class="gach_ngang"></div>';
+            echo '<a class="doingu_vattu_title" href=' . get_permalink( $post_id ) . ' 
+            style="text-decoration: none"><h1>'. $instance['category'] .'</h1></a>';
+            echo '<div class="gach_ngang"></div>';
+            echo '<div class="doingu_vattu">
+                    <div class="doingu_vattu_content">'.
+                wp_trim_words( $final_string , $num_words = 250, $more = '...' )
+                .'</div>
+                    <div class="MBTreadmore">
+                        <a href=' .  get_permalink( $post_id ) . '>xem thêm...</a>
+                    </div>
+                    <div class="doingu_vattu_image">
+                       '.  get_the_post_thumbnail( $post_id ) .'
+                    </div>
+                </div>';
+            echo '<div class="gach_ngang"></div>';
+            echo '<p href=""><h1 class="video_show"> Video Tham Khao </h1></p>';
+            echo '<div class="gach_ngang"></div>';
+            echo do_shortcode( '[tnt_video_list id=1]' );
+        }
+        else if (!empty($instance['title'])){
             // Get Title
             echo '<div class="gach_ngang"></div>';
-            echo '<a class="widget_category_title" href='.$link.' style="text-decoration: none">' . $args['before_title'] . apply_filters('widget_title', $instance['title']) . $args['after_title'] . '</a>';
+            echo '<a class="widget_category_title" href=' . $link . ' style="text-decoration: none">' . $args['before_title'] . apply_filters('widget_title', $instance['title']) . $args['after_title'] . '</a>';
             echo '<div class="gach_ngang"></div>';
-        }
-        $args = array('post_type' => 'product', 'posts_per_page' => esc_attr($instance['post_number']), 'product_cat' => esc_attr($instance['category']));
-        $loop = new WP_Query($args);
 
-        /**
-         * Description.
-         */
-        $args = array(
-            'taxonomy' => 'product_cat',
-            'slug' => 'thiet-ke-nha',
-        );
-        $terms = get_terms('product_cat', $args);
-        $count = count($terms);
-        if ($count > 0) {
-            foreach ($terms as $term) {
-                $description = $term->description;
-                $pieces = explode(" ", $description);
-                $first_part = implode(" ", array_splice($pieces, 0, 100));
-                echo '<div class="st_description_category">' . $first_part . '</div>';
-            }
-
-        }
-
-        echo '<div><ul class="st_show_product_home_page">';
-        while ($loop->have_posts()) : $loop->the_post();
-            echo '
+            $args = array('post_type' => 'product', 'posts_per_page' => esc_attr($instance['post_number']), 'product_cat' => esc_attr($instance['category']));
+            $loop = new WP_Query($args);
+            //Show Products.
+            echo '<div><ul class="st_show_product_home_page">';
+            while ($loop->have_posts()) : $loop->the_post();
+                echo '
                         <li>
                             <a href="' . get_permalink() . '">
                                 ' . woocommerce_get_product_thumbnail() . '
@@ -80,9 +114,11 @@ class Widget_Product_ThietKe_Nha extends WP_Widget
                             </a>
                         </li>
             ';
-        endwhile;
-        echo '<div class="MBTreadmore"><a href='.$link.'>xem thêm...</a></div></ul></div>';
-        echo $args['after_widget'];
+            endwhile;
+            //Button readmore.
+            echo '<div class="MBTreadmore"><a href=' . $link . '>xem thêm...</a></div></ul></div>';
+            echo $args['after_widget'];
+        }
     }
 
 
@@ -94,7 +130,7 @@ class Widget_Product_ThietKe_Nha extends WP_Widget
     public function form($instance)
     {
         // outputs the options form on admin
-        $default= array(
+        $default = array(
             'title' => 'Tên hiển thị',
             'category' => '',
             'post_number' => '8',
@@ -128,7 +164,6 @@ class Widget_Product_ThietKe_Nha extends WP_Widget
                    value="<?php echo esc_attr($post_number); ?>">
         </p><p></p>
 
-
         <!--        Category-->
         <p>
 
@@ -138,12 +173,25 @@ class Widget_Product_ThietKe_Nha extends WP_Widget
                 <?php
                 $args = array('taxonomy' => 'product_cat');
                 $categories = get_terms('product_cat', $args);
+                ?>
+                <?php
                 foreach ($categories as $cat) { ?>
-                    <option <?php selected($instance['category'], $cat->slug ); ?> value='<?php echo esc_attr($cat->slug); ?>'>
+                    <option <?php selected($instance['category'], $cat->slug); ?>
+                        value='<?php echo esc_attr($cat->slug); ?>'>
                         <?php echo $cat->name; ?>
                     </option>
-                <?php }
-                ?>
+                <?php } ?>
+
+                <?php
+                $titles = array('Đội Ngũ', 'Sửa chữa');
+                foreach ($titles as $title) {
+                    $page = get_page_by_title($title, OBJECT, 'post');
+                    $post_id = get_post($page->ID);
+                    $title = $post_id->post_title; ?>
+                    <option <?php selected($instance['category'], $title); ?> value='<?php echo $title ?>'>
+                        <?php echo $title ?>
+                    </option>
+                <?php } ?>
             </select>
         <hr/>
         </p>
@@ -167,4 +215,5 @@ class Widget_Product_ThietKe_Nha extends WP_Widget
 
         return $updated_instance;
     }
+
 }
