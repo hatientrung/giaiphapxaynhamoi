@@ -125,6 +125,7 @@
 				}
 				$view .= '<h3>'. $video['videoTitle'] . '</h3>';
 				$view .= '<a class="videoLink" href="'.$video['videoEmbed'].'" title="'.$video['videoTitle'].'">';
+                $view .= '<i class="fa fa-play" aria-hidden="true"></i>';
 				$view .= '<img src="'.$video['videoThumb'].'" />';
 				$view .= '</a>';
 

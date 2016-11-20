@@ -287,13 +287,14 @@ body #masthead .hgroup {
 }
 .tntVideoItem {
     margin-left: 0;
-    margin-top: 40px;
+    margin-top: 30px;
 }
 .entry-content .tntVideoList h3 {
     font-size: 1.2em;
     text-align: center;
     font-weight: 500;
     text-transform: lowercase;
+    margin-bottom: 0;
 }
 .entry-content h1.video_show {
     text-align: center;
@@ -302,4 +303,57 @@ body #masthead .hgroup {
     text-transform: uppercase;
     margin: 0;
     line-height: 1.6em;
+}
+.tntVideoItem a.videoLink img {
+
+}
+.entry-content .tntVideoList a {
+    text-decoration: none;
+}
+.fa.fa-play {
+    font: normal normal normal 42px/1 FontAwesome !important;
+    font-size: 50px;
+    height: 12px;
+    top: 70px;
+    position: relative;
+    display: block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    text-align: center;
+    color: orange;
+}
+.entry-content .tntVideoList a img {
+    border: 1px solid orange;
+}
+.fa.fa-play:hover {
+    color: #fcfcfc;
+}
+@media only screen and (min-width: 960px) and ( max-width: 1180px) {
+    .fa.fa-play {
+        top: 40px;
+    }
+}
+@media only screen and (min-width: 780px) and ( max-width: 959px) {
+    .fa.fa-play {
+        top: 40px;
+    }
+}
+@media screen and (min-width: 600px) and ( max-width: 779px) {
+    .fa.fa-play {
+        top: 30px;
+        font-size: 30px;
+    }
+}
+@media screen and (min-width: 321px) and ( max-width: 599px) {
+    .fa.fa-play {
+        top: 90px;
+    }
+    .entry-content .tntVideoItem {
+        width: 100% !important;
+    }
+    .entry-content .tntVideoList a img {
+        width: 100% !important;
+        height: 100% !important; ;
+    }
+
 }
