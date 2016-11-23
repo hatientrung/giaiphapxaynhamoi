@@ -1,7 +1,7 @@
 #page-wrapper #main .full-container #container {
     width: 73%;
     float: right;
-}
+}z
 
 body #secondary aside .product-categories:first-child > li:first-child > a {
     /*text-decoration: none;*/
@@ -104,6 +104,7 @@ body .panel-grid-cell .widget-title {
 .site-main .st_show_product_home_page li a img {
     width: 100%;
     max-height: 140px;
+    height: 140px;
 }
 .trung_show_product .widget-title {
     font-size: 30px;
@@ -356,4 +357,17 @@ body #masthead .hgroup {
         height: 100% !important; ;
     }
 
+}
+.tntVideoList {
+    width: 110%;
+}
+.entry-content {
+    margin-bottom: 25px;
+}
+#search-icon #search-icon-icon .vantage-icon-search,
+#scroll-to-top .vantage-icon-arrow-up {
+    font-family: 'vantage-icons' !important;
+}
+body {
+    overflow: initial !important;
 }
