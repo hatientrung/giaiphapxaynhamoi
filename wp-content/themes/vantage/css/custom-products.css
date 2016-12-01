@@ -1,8 +1,9 @@
 #page-wrapper #main .full-container #container {
     width: 73%;
     float: right;
-}z
+}
 
+z
 body #secondary aside .product-categories:first-child > li:first-child > a {
     /*text-decoration: none;*/
     /*margin-left: -16px;*/
@@ -11,20 +12,22 @@ body #secondary aside .product-categories:first-child > li:first-child > a {
     /*font-size: 16px;*/
     /*padding: 4px 8px 4px 16px;*/
 }
+
 body #secondary aside .product-categories > li {
     /*font-size: 15px;*/
     /*font-weight: bold;*/
 }
+
 body #secondary aside .product-categories li a {
     color: #6e6e6e;
     font-weight: bold;
 }
 
 body #secondary aside .product-categories li ul li {
-    list-style-type:none;
+    list-style-type: none;
 }
 
-body #secondary aside .product-categories li ul li ul li{
+body #secondary aside .product-categories li ul li ul li {
     list-style-type: circle;
     margin-left: 10px;
     font-size: 14px;
@@ -35,7 +38,7 @@ body #secondary .widget ul li {
     border-bottom: 1px solid #e8e8e8;
 }
 
-body #secondary .widget ul li ul li{
+body #secondary .widget ul li ul li {
     padding: 12px 0;
     border-top: 1px solid #e8e8e8;
     border-bottom: none;
@@ -54,7 +57,7 @@ body #secondary .widget ul li a:hover {
 
 body #secondary aside {
     width: 80%;
-    background-color: rgb(243,242,234);
+    background-color: rgb(243, 242, 234);
     padding: 10px;
 }
 
@@ -76,47 +79,69 @@ h3 .vantage-carousel-title .vantage-carousel-title-text {
 body .panel-grid-cell .widget-title {
     text-align: center;
 }
+
 /*--------------------------- HOME PAGE -----------------------------------*/
-.widget.trung_show_product ul{
+.widget.trung_show_product ul {
     margin: 0 0 30px 0;
 }
-.site-main .st_show_product_home_page { list-style-type: none; overflow: hidden; width: 100%; box-sizing: border-box; }
-.site-main .st_show_product_home_page li { float:left; margin: 10px 1%; padding: 0; width: 23%; }
+
+.site-main .st_show_product_home_page {
+    list-style-type: none;
+    overflow: hidden;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 30px 0 1.5em 0;
+}
+
+.site-main .st_show_product_home_page li {
+    float: left;
+    margin: 10px 1%;
+    padding: 0;
+    width: 23%;
+}
+
 .site-main .st_show_product_home_page li:hover {
     border-bottom: 0 none;
     box-shadow: 0 1px 5px rgb(255, 206, 33);
 }
+
 .site-main .st_show_product_home_page li a {
     display: block;
     padding: 0 10px;
     text-decoration: none;
     color: black;
 }
+
 .site-main .st_show_product_home_page li .st_title {
     padding-top: 0;
     height: 3em;
     padding-bottom: 0;
     text-align: center;
 }
+
 .site-main .st_show_product_home_page li .st_title .st_post_title {
     font-weight: 500;
 }
+
 .site-main .st_show_product_home_page li a img {
     width: 100%;
     max-height: 140px;
     height: 140px;
 }
+
 .trung_show_product .widget-title {
     font-size: 30px;
     text-align: center;
     color: orange;
 }
+
 .gach_ngang {
     border-bottom: 1px solid #ddd;
     width: 70%;
     text-align: center;
     margin: auto;
 }
+
 #content .page-title {
     color: #FFC52A;
     font-size: 32px;
@@ -125,22 +150,27 @@ body .panel-grid-cell .widget-title {
     margin: 20px 0;
     padding-bottom: 20px;
 }
+
 #content .term-description {
     border-bottom: 1px solid #ffc52a;
     margin: 20px 0;
     padding-bottom: 20px;
     font-size: 15px;
 }
+
 .woocommerce ul.products li.product a img {
     height: 150px;
 }
+
 .woocommerce-ordering {
     display: none;
 }
+
 body .woocommerce ul.products li.product h3 {
     font-size: 1.1em;
     font-weight: 500;
 }
+
 #secondary .widget .product-categories ul {
     margin-left: 1.2em;
 }
@@ -148,36 +178,43 @@ body .woocommerce ul.products li.product h3 {
 body.has-menu-search .main-navigation ul {
     background-color: #ffba00;
 }
+
 .main-navigation ul li.current-menu-item > a, .main-navigation ul li.current_page_item > a {
     background-color: orange;
     font-size: 18px;
     font-weight: 800;
     border-bottom: 1px solid orange;
 }
+
 .fa.fa-home {
     display: none;
 }
+
 body #masthead .hgroup {
     padding-top: 0;
 }
+
 .fa-home:before {
     display: none !important;
 }
-@media only screen and ( min-width: 1280px)  {
+
+@media only screen and ( min-width: 1280px) {
     .site-main .list-services {
         display: block;
         height: 580px;
     }
+
     .st_description_category {
         margin: 20px;
         text-align: justify;
     }
 }
-@media only screen and (min-width: 960px) and ( max-width: 1199px)   {
+
+@media only screen and (min-width: 960px) and ( max-width: 1199px) {
 
 }
 
-@media only screen and (min-width: 780px) and ( max-width: 959px)   {
+@media only screen and (min-width: 780px) and ( max-width: 959px) {
     .site-main .st_show_product_home_page li a img {
         width: 100%;
         max-height: 100px;
@@ -185,7 +222,7 @@ body #masthead .hgroup {
     }
 }
 
-@media screen and (min-width: 600px) and ( max-width: 779px)   {
+@media screen and (min-width: 600px) and ( max-width: 779px) {
     .site-main .st_show_product_home_page li {
         width: 48%;
     }
@@ -194,81 +231,93 @@ body #masthead .hgroup {
         width: 98%;
         float: right;
     }
+
     body #secondary aside {
         width: 100%;
     }
 }
 
-@media screen and (min-width: 320px) and ( max-width: 599px)   {
+@media screen and (min-width: 320px) and ( max-width: 599px) {
     .site-main .st_show_product_home_page li {
-        width: 82%;
+        width: 100%;
         max-height: 250px;
     }
+
     .site-main .st_show_product_home_page li a img {
         min-height: 180px;
         max-height: 180px;
     }
+
     body.responsive .full-container #secondary {
         width: 98%;
         float: right;
     }
+
     body #secondary aside {
         width: 100%;
     }
 }
 
-@media only screen and (min-width: 960px) and ( max-width: 1111px)   {
-    .site-main  .list-services {
+@media only screen and (min-width: 960px) and ( max-width: 1111px) {
+    .site-main .list-services {
         display: block;
     }
 }
+
 /*------------- Brown top Bottom----------*/
-.MBTreadmore{
+.MBTreadmore {
     text-transform: uppercase;
-    text-align:right;
-    cursor:pointer;
-    color:orange;
-    margin:5px 0;
-    float:right;
-    border-right:2px solid orange;
-    border-left:2px solid orange;
-    padding:5px;
-    -moz-border-radius:6px;
-    -webkit-border-radius:6px;
-    font:bold 11px sans-serif;
+    text-align: right;
+    cursor: pointer;
+    color: orange;
+    margin: 5px 0;
+    float: right;
+    border-right: 2px solid orange;
+    border-left: 2px solid orange;
+    padding: 5px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    font: bold 11px sans-serif;
 }
-.MBTreadmore:hover{
-    font:bold 11px sans-serif;
-    color:orange;
-    border-right:2px solid orange;
-    border-left:2px solid orange;
+
+.MBTreadmore:hover {
+    font: bold 11px sans-serif;
+    color: orange;
+    border-right: 2px solid orange;
+    border-left: 2px solid orange;
 }
+
 .MBTreadmore a {
-    color:grey !important;
-    text-decoration:none;
+    color: grey !important;
+    text-decoration: none;
 }
+
 .MBTreadmore a:hover {
-    color:orange !important;
-    text-decoration:none;
+    color: orange !important;
+    text-decoration: none;
 }
+
 #comments, #nav-below {
     display: none;
 }
 
-.full-container .widget_category_title h1{
+.full-container .widget_category_title h1 {
     text-align: center;
     font-weight: 900;
     color: #FFBA00;
     text-transform: uppercase;
 }
+
 /*--------- Doi Ngu Vat Tu -----------*/
 .doingu_vattu_image {
     width: 100%;
     margin-top: 40px;
 }
+
 .doingu_vattu {
     margin: 20px 0 50px;
 }
+
 .widget .doingu_vattu_image img {
     height: 250px;
     width: 100%;
@@ -280,16 +329,19 @@ body #masthead .hgroup {
     color: #FFBA00;
     text-transform: uppercase;
 }
+
 .entry-content .doingu_vattu_title h1 {
     text-align: center;
     font-weight: 900;
     color: #FFBA00;
     text-transform: uppercase;
 }
+
 .tntVideoItem {
     margin-left: 0;
     margin-top: 30px;
 }
+
 .entry-content .tntVideoList h3 {
     font-size: 1.2em;
     text-align: center;
@@ -297,6 +349,7 @@ body #masthead .hgroup {
     text-transform: lowercase;
     margin-bottom: 0;
 }
+
 .entry-content h1.video_show {
     text-align: center;
     font-weight: 900;
@@ -305,12 +358,15 @@ body #masthead .hgroup {
     margin: 0;
     line-height: 1.6em;
 }
+
 .tntVideoItem a.videoLink img {
 
 }
+
 .entry-content .tntVideoList a {
     text-decoration: none;
 }
+
 .fa.fa-play {
     font: normal normal normal 42px/1 FontAwesome !important;
     font-size: 50px;
@@ -323,51 +379,127 @@ body #masthead .hgroup {
     text-align: center;
     color: orange;
 }
+
 .entry-content .tntVideoList a img {
     border: 1px solid orange;
 }
+
 .fa.fa-play:hover {
     color: #fcfcfc;
 }
+
 @media only screen and (min-width: 960px) and ( max-width: 1180px) {
     .fa.fa-play {
         top: 40px;
     }
 }
+
 @media only screen and (min-width: 780px) and ( max-width: 959px) {
     .fa.fa-play {
         top: 40px;
     }
 }
+
 @media screen and (min-width: 600px) and ( max-width: 779px) {
     .fa.fa-play {
         top: 30px;
         font-size: 30px;
     }
 }
-@media screen and (min-width: 321px) and ( max-width: 599px) {
+
+@media screen and (min-width: 311px) and ( max-width: 599px) {
     .fa.fa-play {
         top: 90px;
+    }
+    body  .tntVideoItem {
+        margin-left: 0 !important;
     }
     .entry-content .tntVideoItem {
         width: 100% !important;
     }
+
     .entry-content .tntVideoList a img {
         width: 100% !important;
-        height: 100% !important; ;
+        height: 100% !important;;
     }
 
 }
+
 .tntVideoList {
     width: 110%;
 }
+
 .entry-content {
     margin-bottom: 25px;
 }
+
 #search-icon #search-icon-icon .vantage-icon-search,
 #scroll-to-top .vantage-icon-arrow-up {
     font-family: 'vantage-icons' !important;
 }
+
 body {
     overflow: initial !important;
+}
+
+#masthead.site-header .hgroup {
+    padding-bottom: 15px;
+}
+
+/*#main-slider {*/
+    /*display: none;*/
+/*}*/
+
+#masthead.site-header {
+    background: #fff;
+}
+
+body #page-wrapper {
+    padding-top: 0;
+}
+
+body .site-header .main-navigation {
+    margin: 0;
+}
+
+body #masthead {
+    padding: 0;
+}
+
+body #masthead .hgroup .logo img {
+    width: 100%;
+    height: 100%;
+}
+body #masthead .hgroup .logo {
+    display: block;
+    float: left;
+    max-width: 100%;
+    width: 100%;
+}
+body .mobile-nav-frame [class^="fa fa-"] {
+    font-family: FontAwesome !important;
+}
+body .main-navigation ul li a, #masthead.masthead-logo-in-menu .logo {
+    font-family: FontAwesome !important;
+}
+@media only screen and ( min-width: 1231px) {
+    div#widget_sp_image-2 {
+        position: absolute;
+        right: 0;
+    }
+    div#widget_sp_image-3 {
+        position: absolute;
+        left: 0;
+    }
+    div#widget_sp_image-3, div#widget_sp_image-2 {
+        /*display: block;*/
+    }
+    div#widget_sp_image-3 img, div#widget_sp_image-2 img {
+        max-width: 202px;
+    }
+}
+@media screen and ( max-width: 1230px ){
+    div#widget_sp_image-3, div#widget_sp_image-2 {
+        display: none;
+    }
 }

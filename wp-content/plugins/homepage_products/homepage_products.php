@@ -117,8 +117,9 @@ class Widget_Product_ThietKe_Nha extends WP_Widget
             endwhile;
             //Button readmore.
             echo '<div class="MBTreadmore"><a href=' . $link . '>xem thêm...</a></div></ul></div>';
-            echo $args['after_widget'];
         }
+        
+        echo $args['after_widget'];
     }
 
 

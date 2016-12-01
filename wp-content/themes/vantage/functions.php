@@ -332,6 +332,10 @@ function vantage_scripts() {
 	 * Trung St custom
 	 */
 	wp_enqueue_style( 'vantage-woocommerce', get_template_directory_uri() . '/css/custom-products.css' );
+    wp_enqueue_style( 'demo', get_template_directory_uri() . '/css/demo.css' );
+    wp_enqueue_style( 'common', get_template_directory_uri() . '/css/common.css' );
+    wp_enqueue_style( 'style2', get_template_directory_uri() . '/css/style2.css' );
+    wp_enqueue_script( 'modernizr.custom.79639', get_template_directory_uri() . '/js/modernizr.custom.79639.js');
 	/**
 	 * end Trung St custom
 	 */
@@ -677,14 +681,14 @@ function my_tweaked_admin_bar() {
 	//Add a link called 'My Link'...
 	$wp_admin_bar->add_menu( array(
 		'id'    => 'custom-setting',
-		'title' => 'CÃ i Ä‘áº·t',
+		'title' => 'Cài d?t',
 		'href'  => admin_url()
 	));
 
 	//THEN add a sub-link called 'Sublink 1'...
 	$wp_admin_bar->add_menu( array(
 		'id'    => 'custom-setting-company-name',
-		'title' => 'TÃªn cÃ´ng ty',
+		'title' => 'Tên công ty',
 		'href'  => admin_url(),
 		'parent'=>'custom-setting'
 	));
@@ -696,7 +700,7 @@ function my_tweaked_admin_bar() {
 // function admin_menu() {
 // 	add_options_page(
 // 		'Home Settings',
-// 		'CÃ i Ä‘áº·t tá»•ng quÃ¡t',
+// 		'Cài d?t t?ng quát',
 // 		'manage_options',
 // 		'home_settings',
 // 		'settings_page'
@@ -717,7 +721,7 @@ function my_tweaked_admin_bar() {
 //     }
 //     function register_fields() {
 //         register_setting( 'general', 'company_name', 'esc_attr' );
-//         add_settings_field('fav_color', '<label for="company_name">'.__('TÃªn cÃ´ng ty' , 'company_name' ).'</label>' , array(&$this, 'fields_html') , 'general' );
+//         add_settings_field('fav_color', '<label for="company_name">'.__('Tên công ty' , 'company_name' ).'</label>' , array(&$this, 'fields_html') , 'general' );
 //     }
 //     function fields_html() {
 //         $value = get_option( 'company_name', '');

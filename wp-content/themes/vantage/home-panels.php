@@ -32,7 +32,7 @@ get_header();
 <!--         <div class="thiet_ke1">
             <section class="banner-section">
                 <div class="container">
-                    <h2>Thiết kế nhà - thư ngỏ<a class="button-one" href="#">click here</a></h2>
+                    <h2>Thi?t k? nh� - thu ng?<a class="button-one" href="#">click here</a></h2>
                 </div>
             </section>
         </div> -->
